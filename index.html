@@ -104,7 +104,7 @@
 						enter your mobile phone number.
 					</p>
 					<select
-						class="form-select form-select-border"
+						class="form-select form-select-border select_key"
 						aria-label="Default select example"
 					>
 						<option selected>Uzbekistan</option>
@@ -113,23 +113,29 @@
 						<option value="4">Ukraine</option>
 						<option value="5">Germaniya</option>
 					</select>
+					+
 					<input
-						type="text"
+						type="number"
 						name=""
-						value="+998"
-						class="countrys-code form-select-border"
+						value="998"
+						class="countrys-code form-select-border tel_code"
 					/>
-					<input type="text" name="" class="phone-number form-select-border" />
+					<input
+						type="number"
+						name=""
+						class="phone-number form-select-border tel_number"
+					/>
 
 					<a href="#" class="btn btn-primary btn2 page2-btn">START MESSAGING</a>
 				</div>
 			</div>
 		</div>
 
-		<!-- ** ------------------------------------------- Page 3 offcanvas ------------------------------------------ -->
+		<!-- ** ------------------------------------------- Page 3 Container 3------------------------------------------ -->
 		<div class="container3 hidden">
 			<div class="msg-background">
 				<!-- <div class="sender-box"></div> -->
+				<p class="delete">Delete</p>
 			</div>
 			<div
 				class="offcanvas offcanvas-start"
@@ -137,34 +143,68 @@
 				id="offcanvasExample"
 				aria-labelledby="offcanvasExampleLabel"
 			>
+				<!-- ** ------------------------------ Page 3 Canvas ----------------------------------------- -->
+
 				<div class="canvas-heder">
 					<div class="userimg"></div>
 
 					<div class="userinformation">
 						<p>Username</p>
-						<p>+998 99 777 66 55</p>
+						<p class="user_tel_number"></p>
 					</div>
 				</div>
-				<div class="canvas-body">
-					<p><i class="fas fa-user-friends"></i>New Group</p>
-					<p><i class="fas fa-bullhorn"></i> New Channel</p>
-					<p><i class="fas fa-user-alt"></i> Contacts</p>
-					<p><i class="fas fa-phone-alt"></i> Calls</p>
-					<p><i class="fas fa-cog"></i> Settings</p>
-					<p>
-						<i class="fas fa-moon"></i><bold>Night Mode</bold>
-						<i class="fas fa-toggle-on"></i>
-					</p>
+
+				<!-- ** ------------------------------------------- page3 text menu--------------------------- -->
+				<div class="canvas_body">
+					<a href="#">
+						<p class="create_new_group canvas_body_p">
+							<i class="fas fa-user-friends canvas_icon"></i>New Group
+						</p></a
+					>
+					<a href="#">
+						<p class="canvas_body_p">
+							<i class="fas fa-bullhorn canvas_icon"></i> New Channel
+						</p></a
+					>
+					<a href="#">
+						<p class="canvas_body_p">
+							<i class="fas fa-user-alt canvas_icon"></i> Contacts
+						</p></a
+					>
+					<a href="#">
+						<p class="canvas_body_p">
+							<i class="fas fa-phone-alt canvas_icon"></i> Calls
+						</p></a
+					>
+					<a href="#">
+						<p class="canvas_body_p">
+							<i class="fas fa-cog canvas_icon"></i> Settings
+						</p></a
+					>
+					<a href="#"
+						><p class="canvas_body_p">
+							<i class="fas fa-moon canvas_icon"></i><bold>Night Mode </bold>
+							<span>
+								<div class="form-check form-switch">
+									<input
+										class="form-check-input night_mode_on"
+										type="checkbox"
+										id="flexSwitchCheckDefault"
+									/>
+								</div>
+							</span>
+						</p>
+					</a>
 				</div>
 			</div>
 
-			<!--** -------------------------------------------- Page 3 top-left items --------------------------------------- -->
+			<!--** ----------------------------------------- Page 3 top-left items --------------------------------------- -->
 
 			<div class="row">
 				<div class="col-4">
-					<div class="list-group" id="list-tab" role="tablist">
+					<div class="list-group users_menu" id="list-tab" role="tablist">
 						<a
-							class="first-item"
+							class="first-item group_background"
 							id="list-profile-list"
 							data-bs-toggle="list"
 							href="#list-profile"
@@ -187,10 +227,63 @@
 							/>
 						</a>
 
-						<!-- ** ---------------------------- Page 3 Users, Groups, Channels ------------------------------- -->
+						<!-- ** ---------------------- Page 3 Users, Groups, Channels ---------------------------- -->
 
 						<a
-							class="list-group-item list-group-item-action active"
+							class="list-group-item list-group-item-action group_background"
+							id="list-messages-list"
+							data-bs-toggle="list"
+							href="#list-messages"
+							role="tab"
+							aria-controls="list-messages"
+						>
+							<div class="ava ava2"></div>
+							<class class="username">
+								<bold class="Group_And_Username text_night_mode_color">
+									<i class="fas fa-user-friends"></i> inlab.uz</bold
+								>
+								<span class="time">messages</span>
+							</class>
+						</a>
+						<a
+							class="list-group-item list-group-item-action group_background"
+							id="list-messages-list"
+							data-bs-toggle="list"
+							href="#list-messages"
+							role="tab"
+							aria-controls="list-messages"
+						>
+							<div class="ava"></div>
+							<class class="username">
+								<bold class="Group_And_Username text_night_mode_color">
+									<i class="fas fa-user-friends"></i> Uzbek MDK</bold
+								>
+								<span class="time">messages</span>
+							</class>
+						</a>
+						<a
+							class="list-group-item list-group-item-action group_background"
+							id="list-messages-list"
+							data-bs-toggle="list"
+							href="#list-messages"
+							role="tab"
+							aria-controls="list-messages"
+						>
+							<div class="ava"></div>
+							<class class="username">
+								<bold class="Group_And_Username text_night_mode_color">
+									<i class="fas fa-user-friends"></i> Instarding</bold
+								>
+								<span class="time">messages</span>
+							</class>
+						</a>
+
+						<!-- <a
+							class="
+								list-group-item list-group-item-action
+								active
+								group_background
+							"
 							id="list-home-list"
 							data-bs-toggle="list"
 							href="#list-home"
@@ -198,58 +291,37 @@
 							aria-controls="list-home"
 							><div class="ava"></div>
 							<span class="username">
-								<bold><i class="fas fa-bullhorn"></i> Instarding</bold>
+								<bold class="Group_And_Username"
+									><i class="fas fa-bullhorn"></i> Instarding</bold
+								>
 								<span class="time">messages</span></span
 							></a
 						>
 						<a
-							class="list-group-item list-group-item-action"
-							id="list-profile-list"
-							data-bs-toggle="list"
-							href="#list-profile"
-							role="tab"
-							aria-controls="list-profile"
-							><div class="ava ava1"></div>
-							<span class="username">
-								<bold><i class="fas fa-user-friends"></i> Group</bold>
-								<span class="time">messages</span></span
-							></a
-						>
-						<a
-							class="list-group-item list-group-item-action"
-							id="list-messages-list"
-							data-bs-toggle="list"
-							href="#list-messages"
-							role="tab"
-							aria-controls="list-messages"
-							><div class="ava ava2"></div>
-							<span class="username">
-								<bold><i class="fas fa-user-friends"></i> inlab.uz</bold>
-								<span class="time">messages</span></span
-							></a
-						>
-						<a
-							class="list-group-item list-group-item-action"
+							class="list-group-item list-group-item-action group_background"
 							id="list-settings-list"
 							data-bs-toggle="list"
 							href="#list-settings"
 							role="tab"
 							aria-controls="list-settings"
-							><div class="ava ava3"></div>
+							><div class="ava"></div>
 							<span class="username">
-								<bold><i class="fas fa-bullhorn"></i> Uzbek MDK</bold>
+								<bold class="Group_And_Username"
+									><i class="fas fa-bullhorn"></i> Uzbek MDK</bold
+								>
 								<span class="time">messages</span></span
 							></a
-						>
+						> -->
 					</div>
 				</div>
 
 				<!-- ** ------------------------------------------- Page-3 top nav-items ------------------------------------- -->
 
 				<div class="window3-nav">
-					<span class="username">
-						Instarding <span class="time">88 888 Subscribers </span></span
-					>
+					<div>
+						<span class="username_nav text_night_mode_color">Telegram </span>
+						<span class="time"> Subscribers </span>
+					</div>
 					<span class=""
 						><i class="fas fa-search win3-right-items"></i>
 						<i class="fas fa-phone-alt win3-right-items"></i>
@@ -261,22 +333,88 @@
 
 				<div class="window3-message">
 					<span class="bottom-attachmet">
-						<i class="fas fa-paperclip attachment"></i>
+						<label class="input_label">
+							<i class="fas fa-paperclip attachment"></i>
+							<input type="file" class="input_file" />
+						</label>
+
 						<input
 							type="text"
 							class="input-message"
 							placeholder="Write a message..."
 						/>
 					</span>
+
 					<span class="bottom-items-display">
-						<i class="far fa-smile smile-icon"></i>
+						<!-- <i class="far fa-smile smile-icon "></i> -->
+						<div class="btn-group">
+							<i
+								class="far fa-smile smile-icon"
+								id="dropdownMenuClickableInside"
+								data-bs-toggle="dropdown"
+								data-bs-auto-close="outside"
+								aria-expanded="false"
+							></i>
+							<ul
+								class="dropdown-menu dropup-menu"
+								aria-labelledby="dropdownMenuClickableInside"
+							>
+								<li class="smile-list">
+									<button class="smile_btn">😀</button>
+									<button class="smile_btn">😁</button>
+									<button class="smile_btn">😂</button>
+									<button class="smile_btn">🤣</button>
+									<button class="smile_btn">😃</button>
+									<button class="smile_btn">😄</button>
+									<button class="smile_btn">😆</button>
+									<button class="smile_btn">😉</button>
+									<button class="smile_btn">😊</button>
+									<button class="smile_btn">😋</button>
+									<button class="smile_btn">😎</button>
+									<button class="smile_btn">😍</button>
+									<button class="smile_btn">😘</button>
+									<button class="smile_btn">🥰</button>
+									<button class="smile_btn">😗</button>
+									<button class="smile_btn">🙂</button>
+									<button class="smile_btn">🤗</button>
+									<button class="smile_btn">🤩</button>
+									<button class="smile_btn">🤔</button>
+									<button class="smile_btn">😐</button>
+									<button class="smile_btn">😑</button>
+									<button class="smile_btn">🙄</button>
+									<button class="smile_btn">🤐</button>
+									<button class="smile_btn">😪</button>
+									<button class="smile_btn">😴</button>
+									<button class="smile_btn">😫</button>
+									<button class="smile_btn">😛</button>
+									<button class="smile_btn">😜</button>
+									<button class="smile_btn">😝</button>
+									<button class="smile_btn">🤤</button>
+									<button class="smile_btn">🤑</button>
+
+									<!-- <button class="dropdown-item" type="button">Action</button> -->
+								</li>
+							</ul>
+						</div>
+
 						<i class="fas fa-microphone win3-right-bottom-items"></i>
-						<img
-							src="./img/send-icon.png"
-							class="send-icon hidden"
-							alt="send icon"
-						/>
+						<i class="fas fa-location-arrow send-icon hidden"></i>
 					</span>
+				</div>
+			</div>
+			<!--** ----------------------------------------- Page new group --------------------------------------- -->
+			<div class="new_group_background hidden"></div>
+			<div class="new_group hidden">
+				<div class="group_img"><i class="fas fa-camera"></i></div>
+				<input type="text" class="new_group_input" />
+				<p class="group_p">Group name</p>
+				<div class="new_group_buttons_box">
+					<input
+						type="button"
+						value="CANCEL"
+						class="new_group_btn cancel_btn"
+					/>
+					<input type="button" value="NEXT" class="new_group_btn next_btn" />
 				</div>
 			</div>
 		</div>
@@ -294,7 +432,7 @@
 
 		<!-- Option 2: Separate Popper and Bootstrap JS -->
 
-		<script
+		<!-- <script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
 			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
 			crossorigin="anonymous"
@@ -303,6 +441,6 @@
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
 			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
 			crossorigin="anonymous"
-		></script>
+		></script> -->
 	</body>
 </html>

@@ -1,3 +1,7 @@
+:root {
+	--blue: ;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,8 +10,10 @@ body {
 	overflow-x: hidden;
 }
 a {
+	color: black;
 	text-decoration: none;
 }
+
 /**-------------------------------- Page 1 navbar ---------------------------------------*/
 .hidden {
 	display: none;
@@ -74,6 +80,7 @@ span {
 	border-radius: 0;
 	border: none;
 }
+
 .btn:hover {
 	background-color: rgb(0, 159, 233);
 }
@@ -100,6 +107,10 @@ span {
 	height: 50%;
 	background-color: rgb(255, 255, 255);
 }
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
 .form-select-border {
 	margin-top: 8px;
 	padding: 5px;
@@ -115,7 +126,7 @@ span {
 	margin-right: 5px;
 }
 .phone-number {
-	width: 76%;
+	width: 72%;
 }
 .card-title-size {
 	font-size: 1.2rem;
@@ -155,31 +166,14 @@ span {
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 15px;
 	border-top-right-radius: 15px;
-	font-size: 0.9rem;
 	background-color: rgb(236, 253, 193);
 }
 
-/* .sender-box {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
-	align-items: flex-end;
-	margin-right: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
-	margin-top: 10px;
-	width: 58%;
-	height: 100%;
-	overflow: scroll;
-	background-color: rgb(79, 79, 139);
-} */
-
 .msg-background {
+	box-sizing: content-box;
 	position: absolute;
 	right: 0;
 	bottom: 50px;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -190,15 +184,77 @@ span {
 	width: 75vh;
 	height: 85.5%;
 	overflow-x: hidden;
-	/* overflow-y: scroll; */
-
-	/* background-color: blue; */
 }
 
+/**----------------------------------------Page3 delete message-------------------------------**/
+.delete {
+	position: fixed;
+	display: none;
+	padding: 2px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: rgb(255, 246, 234);
+}
+.delete.active-delete {
+	display: block;
+}
+/**----------------------------------------Page3 Smile Drop menu-------------------------------**/
+
+.dropup-menu {
+	padding: 10px;
+	width: 350px;
+	height: 400px;
+	background-color: rgb(253, 255, 233);
+}
+
+.dropup-menu_night_mode {
+	background-color: rgb(39, 53, 61, 0.9);
+	border: 1px solid rgba(0, 0, 255, 0.349);
+	border-radius: 10px;
+}
+
+.smile-list {
+	display: inline-block;
+}
+.smile_btn {
+	font-size: 1.5rem;
+	/* margin: 2px; */
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(253, 255, 233);
+	outline: none;
+}
+.smile_btn_night_mode {
+	background-color: rgb(39, 53, 61, 0.5);
+}
+.smile_btn:hover {
+	background-color: rgb(182, 182, 182);
+}
+
+/**------------------------Page3  attachment-----------------------------**/
+.input_label {
+	width: 25px;
+	height: 25px;
+	/* background-color: blueviolet; */
+	display: block;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.input_file {
+	display: none;
+}
+.attachment {
+	/* margin-right: 20px; */
+	font-size: 1.5rem;
+	color: rgb(136, 136, 136);
+}
+/**----------------------------Page3  users , groups...--------------------------**/
 .list-group {
 	margin-top: -8px;
 	border-radius: 0;
-	border-right: 1px solid rgba(191, 191, 191, 0.412);
+	border-right: 1px solid rgba(124, 124, 124, 0.412);
 	width: 25vw;
 	height: 101vh;
 	background-color: rgb(255, 255, 255);
@@ -210,7 +266,7 @@ span {
 	height: 70px;
 }
 .list-group-item:hover {
-	background-color: rgb(235, 235, 235);
+	background-color: rgba(133, 133, 133, 0.11);
 }
 
 .active:hover {
@@ -223,7 +279,7 @@ span {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
+	/* background-color: white; */
 }
 .first-item:hover {
 	background-color: white;
@@ -231,7 +287,7 @@ span {
 .bars {
 	margin-right: 20px;
 	font-size: 1.3rem;
-	color: rgba(84, 84, 84, 0.707);
+	color: rgba(151, 151, 151, 0.707);
 }
 .search {
 	width: 90%;
@@ -247,38 +303,45 @@ span {
 	background-color: white;
 	border: 2px solid rgb(0, 174, 255);
 }
+.night_mode_search {
+	color: white;
+	background-color: rgba(90, 90, 90, 0.432);
+}
+.night_mode_search:hover {
+	background-color: rgba(233, 233, 233, 0.302);
+}
 
 .ava {
 	width: 55px;
 	height: 55px;
 	margin-right: 10px;
-	background-color: gray;
+	background-color: rgb(0, 130, 216);
 	border-radius: 50%;
-	background-image: url(./img/photo_2018-09-06_20-43-40.jpg);
+	/* background-image: url(./img/photo_2018-09-06_20-43-40.jpg); */
 	background-size: cover;
 }
-.ava1 {
+/* .ava1 {
 	background-image: url(./img/photo_2019-06-06_23-27-30.jpg);
 	background-size: cover;
-}
-.ava2 {
+} */
+/* .ava2 {
 	background-image: url(./img/photo_2021-07-29_11-47-56.jpg);
 	background-size: cover;
-}
-.ava3 {
+} */
+/* .ava3 {
 	background-image: url(./img/photo_2017-04-23_19-24-57.jpg);
 	background-size: cover;
-}
+} */
 .window3-nav {
 	position: absolute;
 	top: 0px;
-	right: 0px;
+	right: -10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px 15px;
 	padding-left: 30px;
-	width: 75%;
+	width: 75.6%;
 	height: 61px;
 	border-bottom: 1px solid rgba(191, 191, 191, 0.412);
 	background-color: rgb(255, 255, 255);
@@ -286,21 +349,25 @@ span {
 .window3-message {
 	position: absolute;
 	bottom: 0px;
-	right: 0px;
+	right: -10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px 15px;
-	width: 75%;
+	width: 75.6%;
 	height: 50px;
 	border-top: 1px solid rgba(191, 191, 191, 0.412);
 	background-color: rgb(255, 255, 255);
 }
-.attachment {
-	margin-right: 20px;
-	font-size: 1.5rem;
-	color: rgb(177, 177, 177);
+
+.username_nav {
+	display: flex;
+	align-items: center;
+	/* flex-direction: column; */
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: black;
 }
+
 .username {
 	display: flex;
 	flex-direction: column;
@@ -326,12 +393,14 @@ span {
 	position: relative;
 	right: 80px;
 	font-size: 1.5rem;
-	color: rgb(0, 142, 236);
+	color: rgb(148, 148, 148);
+	/* color: rgb(0, 142, 236); */
 }
 .send-icon {
+	transform: rotate(42deg);
 	position: absolute;
-	right: 25px;
-	height: 25px;
+	right: 40px;
+	font-size: 1.5rem;
 }
 .bottom-attachmet {
 	display: flex;
@@ -339,6 +408,7 @@ span {
 	color: black;
 }
 .input-message {
+	padding-left: 15px;
 	width: 40vw;
 	border: none;
 	outline: none;
@@ -349,7 +419,7 @@ span {
 	/* width: 30vw; */
 	display: flex;
 }
-/**----------------------------------------------------------- Page 3 OffCanvas -------------------------------------------- **/
+/**------------------------------------------ Page 3 OffCanvas -------------------------------------------- **/
 .offcanvas {
 	width: 20vw;
 }
@@ -358,7 +428,7 @@ span {
 	flex-direction: column;
 	width: 100%;
 	height: 23vh;
-	background-color: rgba(0, 123, 255, 0.796);
+	background-color: rgba(0, 99, 204, 0.796);
 }
 .userinformation {
 	padding: 5px 30px;
@@ -378,21 +448,167 @@ span {
 	background-color: blueviolet;
 	border-radius: 50%;
 }
-.canvas-body {
-	padding: 20px 30px;
+.canvas_body {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
+}
+.canvas_body a:hover {
+	background-color: rgba(212, 212, 212, 0.534);
+}
+.canvas_body a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+	padding-left: 20px;
+	width: 100%;
 }
 .fa-toggle-on {
 	margin-left: 50px;
 }
-.canvas-body i {
+.canvas_body i {
 	font-size: 1.2rem;
 	padding-right: 20px;
 	color: rgb(126, 126, 126);
 }
-.canvas-body p {
+.canvas_body p {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	color: black;
+	/* color: rgb(8, 8, 8); */
 	cursor: pointer;
+}
+.canvas_p_color {
+	color: rgb(255, 255, 255);
+}
+.canvas_icon_color {
+	text-shadow: 0 0 16px rgb(255, 255, 255);
+}
+/* .canvas_icon_color:hover {
+	color: rgb(255, 255, 255);
+} */
+
+/**----------------------------------------Page3 New group bacground-------------------------------**/
+.new_group_background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.397);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.new_group {
+	position: absolute;
+	top: 35%;
+	left: 38%;
+	padding-left: 25px;
+	padding-top: 30px;
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+	height: 190px;
+	border-radius: 5px;
+	background-color: ivory;
+}
+.group_p {
+	margin-left: 5px;
+	position: absolute;
+	top: 65px;
+	left: 37%;
+	color: rgb(143, 143, 143);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.new_group_p_active {
+	font-size: 0.9rem;
+	margin-left: 5px;
+	position: absolute;
+	top: 40px;
+	left: 37%;
+	color: rgb(0, 126, 199);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	transition: all 0.5s ease;
+}
+
+.new_group_input {
+	width: 230px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+	margin: 20px;
+	margin-top: 25px;
+	margin-left: 30px;
+	height: 40px;
+	padding-bottom: -5px;
+}
+.new_group_input_active {
+	transition: all 0.5s ease;
+	border-bottom: 2px solid rgb(0, 126, 199);
+}
+.group_img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-color: rgb(0, 132, 219);
+}
+.fa-camera {
+	font-size: 2.5rem;
+	color: white;
+}
+.new_group_buttons_box {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	display: flex;
+}
+.new_group_btn {
+	border-radius: 5px;
+	padding: 6px 15px;
+
+	outline: none;
+	border: none;
+	color: rgb(0, 126, 199);
+	background-color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.new_group_btn:hover {
+	background-color: rgba(0, 162, 255, 0.233);
+}
+/**----------------------------------------Page3 night mode-------------------------------**/
+.on_off_btn {
+	width: 30px;
+	height: 15px;
+	background-color: blue;
+	position: absolute;
+}
+.night_mode_on {
+	position: absolute;
+	left: 250px;
+	top: 17px;
+	/* margin-bottom: 15px; */
+	cursor: pointer;
+}
+/* . */
+.night_mode_background_on {
+	/* padding: 1px; */
+	background-color: rgb(39, 53, 61);
+	color: rgb(255, 255, 255);
+	border: none;
+}
+
+.night_mode_background:hover {
+	background-color: rgb(39, 53, 61);
+}
+
+.night_mode_on_off:hover {
+	width: 20px;
+	height: 10px;
+}
+.text_night_mode_color_white {
+	color: white;
 }
